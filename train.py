@@ -1,18 +1,6 @@
-import numpy as np
-import datetime
-import tqdm
-
-import torch
-import torch.nn.functional as F
-import torch_geometric
-# from torch_geometric.nn import knn_graph
-from torch_geometric.transforms import KNNGraph
-from torch_geometric.nn import GCNConv
-
-import torch
-from torch_geometric.datasets import ModelNet
-from torch_geometric.transforms import SamplePoints, NormalizeScale
-from torch_geometric.data import DataLoader
+from utils.model import *
+from utils.dataloader import *
+from utils.trainer import *
 
 
 train_loader,test_loader = load_data()

@@ -6,7 +6,7 @@ from utils.trainer import *
 train_loader,test_loader = load_data()
 model = Model().to(device)
 # Assuming optimizer is defined
-optimizer = torch.optim.RMSprop(model.parameters(), lr=0.01)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01,weight_decay=0)
 
 # Train the model
 train(model, train_loader, test_loader, optimizer)
